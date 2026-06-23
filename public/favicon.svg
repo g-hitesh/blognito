@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="sunsetGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8A2387"/>
+      <stop offset="50%" stop-color="#E94057"/>
+      <stop offset="100%" stop-color="#F27121"/>
+    </linearGradient>
+  </defs>
+
+  <path d="M 25 45 L 35 15 C 38 10, 62 10, 65 15 L 75 45 Z" fill="url(#sunsetGrad)"/>
+  
+  <path d="M 27 45 L 31 32 L 69 32 L 73 45 Z" fill="#374151"/>
+
+  <ellipse cx="50" cy="45" rx="46" ry="8" fill="url(#sunsetGrad)"/>
+
+  <path 
+    d="M 25 60 C 10 60 10 85 35 85 C 45 85 50 75 50 75 C 50 75 55 85 65 85 C 90 85 90 60 75 60 C 60 60 55 65 50 65 C 45 65 40 60 25 60 Z" 
+    fill="#1f2937"
+  />
+</svg>

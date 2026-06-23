@@ -1,0 +1,49 @@
+/* src/pages/Home.css */
+
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.home-header {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+/* The Vibrant Gradient Heading */
+.home-header h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #111827; /* This forces it to solid dark slate */
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+}
+
+.home-header p {
+  color: #6b7280;
+  font-size: 1.15rem;
+  max-width: 600px;
+  margin: 0 auto; 
+}
+
+/* --- The Missing Grid Layout --- */
+.blog-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Default to 1 column on mobile */
+  gap: 2.5rem;
+}
+
+/* Tablet: 2 Columns */
+@media (min-width: 768px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop: 3 Columns */
+@media (min-width: 1024px) {
+  .blog-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

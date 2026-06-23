@@ -1,0 +1,146 @@
+/* src/components/BlogCard.css */
+
+.blog-card {
+  background-color: #ffffff;
+  border: 1px solid #e7e5e4;
+  border-radius: 16px;
+  overflow: hidden; /* Ensures image stays inside border radius */
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.blog-card:hover {
+  border-color: #d6d3d1;
+  box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+/* Image wrapper and hover zoom effect */
+.card-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Perfect cinematic ratio */
+  overflow: hidden;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.blog-card:hover .card-image {
+  transform: scale(1.05); /* Smooth zoom on hover */
+}
+
+/* Floating vibrant category pills */
+.category-pill {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  z-index: 2;
+}
+
+/* Dynamic Tag Colors */
+.tag-react { background-color: #3b82f6; color: white; }
+.tag-design { background-color: #ec4899; color: white; }
+.tag-tooling { background-color: #f59e0b; color: white; }
+
+/* Readjusting padding for text content */
+.card-content {
+  padding: 1.5rem 1.5rem 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.title-link {
+  text-decoration: none;
+  color: #1c1917;
+}
+
+.title-link h2 {
+  font-size: 1.25rem;
+  line-height: 1.3;
+  transition: color 0.2s ease;
+}
+
+.title-link:hover h2 {
+  color: #3b82f6; /* Link hover color */
+}
+
+.excerpt {
+  color: #57534e;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-footer {
+  margin-top: auto;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem; /* Acts as a bumper between the name and the date */
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0; /* Crucial: Allows the text inside to shrink and truncate properly */
+}
+
+.author-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #292524;
+  
+  /* Force single line and add "..." if it runs out of space */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.author-avatar {
+  width: 28px;
+  height: 28px;
+  background-color: #1c1917;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.meta-info {
+  display: flex;
+  gap: 1rem;
+  color: #78716c;
+  font-size: 0.8rem;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  
+  /* Add these two lines to prevent the weird wrapping */
+  white-space: nowrap; 
+  flex-shrink: 0;      
+}
