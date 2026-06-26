@@ -6,12 +6,12 @@ import './About.css';
 const teamMembers = [
   {
     name: "Hitesh Kumar",
-    role: "Frontend & MERN Developer",
+    role: "Full Stack Developer",
     bio: "Specializes in the MERN stack and crafting intuitive UIs. Fuels his coding sessions with intense strength training and a strict vegetarian diet."
   },
   {
     name: "Himanshu",
-    role: "Full-Stack Developer",
+    role: "Frontend Developer",
     bio: "Focuses on clean system architecture and building out core, scalable platform features."
   },
   {
@@ -20,13 +20,8 @@ const teamMembers = [
     bio: "Ensures our database infrastructure is robust and our user experience remains lightning fast."
   },
   {
-    name: "Harman",
-    role: "UI/UX & Developer",
-    bio: "Drives technical problem solving, interface design, and rapid feature implementation."
-  },
-  {
     name: "Saksham",
-    role: "Systems Engineer",
+    role: "UI/UX & Developer",
     bio: "Brings complex ideas to life through robust frontend and backend API integration."
   }
 ];
