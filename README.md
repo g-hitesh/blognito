@@ -50,20 +50,11 @@ The application will boot up at http://localhost:5173.
 
 ## 👥 The Team
 
-Blognito is being developed by a 5-person engineering team based in Sahibzada Ajit Singh Nagar, Punjab.
+Blognito is being developed by a 4-person engineering team based in Sahibzada Ajit Singh Nagar, Punjab.
 
-* **Hitesh Kumar** - Frontend & MERN Developer
-* **Himanshu** - Full-Stack Developer
-* **Taran** - Backend Developer
-* **Harman** - UI/UX & Developer
-* **Saksham** - Systems Engineer
+* **Hitesh Kumar** - Full-Stack Developer
+* **Himanshu** - Frontend Developer
+* **Taran** - Frontend Developer
+* **Saksham** - UI/UX
 
 ---
-
-## 🗺️ Roadmap
-
-- [x] UI/UX Design & Frontend Prototyping
-- [x] Global State Management (React Context)
-- [ ] Backend Initialization (Node.js & Express)
-- [ ] Database Integration (MongoDB)
-- [ ] User Authentication & Authorization
