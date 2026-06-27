@@ -5,7 +5,6 @@ import './BlogCard.css';
 const BlogCard = ({ post }) => {
   return (
     <article className="blog-card">
-      {/* New Image Container */}
       <div className="card-image-wrapper">
         <img src={post.imageUrl} alt={post.title} className="card-image" />
         <span className={`category-pill tag-${post.category.toLowerCase()}`}>

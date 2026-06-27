@@ -31,13 +31,11 @@ const About = () => {
     <AnimatedPage>
       <div className="about-container">
         
-        {/* Main Header */}
         <header className="about-header">
           <h1>Behind the Blog</h1>
           <p>Meet the five developers building this platform.</p>
         </header>
 
-        {/* Top Section: The Group Story */}
         <div className="about-content">
           <div className="about-text">
             <h2>Who We Are</h2>
@@ -49,7 +47,6 @@ const About = () => {
             </p>
           </div>
 
-          {/* Quick Facts Sidebar */}
           <aside className="about-sidebar">
             <div className="info-card">
               <h3>Team Facts</h3>
@@ -67,7 +64,6 @@ const About = () => {
           </aside>
         </div>
 
-        {/* Bottom Section: The Team Grid */}
         <div className="team-section">
           <h2>Meet the Team</h2>
           <div className="team-grid">

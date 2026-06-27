@@ -32,10 +32,8 @@ const Edit = () => {
     updatePost(postToEdit.id, {
       title,
       content,
-      // Keep the original date and author
     });
 
-    // Navigate back to the home page or article view
     navigate('/');
   };
 

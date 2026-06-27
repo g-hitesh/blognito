@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useContext } from 'react';
-import { DirectionContext } from '../App'; // Import the GPS context
+import { DirectionContext } from '../App';
 
 const AnimatedPage = ({ children }) => {
   // Grab the current direction from the App.jsx provider

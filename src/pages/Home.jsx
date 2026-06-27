@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import BlogCard from '../components/BlogCard';
 import AnimatedPage from '../components/AnimatedPage';
-import FeaturedSlider from '../components/FeaturedSlider'; // 1. Import the Slider
+import FeaturedSlider from '../components/FeaturedSlider'; 
 import { BlogContext } from '../context/BlogContext';
 import './Home.css';
 
@@ -12,7 +12,6 @@ const Home = () => {
     <AnimatedPage>
       <div className="home-container">
         
-        {/* 2. Place the slider at the very top */}
         <FeaturedSlider />
 
         <header className="home-header">

@@ -1,13 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-// 1. Add the 'X' icon from lucide-react to close the search
 import { SquarePen, Search, X } from 'lucide-react';
 import LogoIcon from './LogoIcon';
 import './Navbar.css';
 
 const Navbar = () => {
   const location = useLocation();
-  const navigate = useNavigate(); // Used to redirect after searching
+  const navigate = useNavigate(); 
 
   const [isScrolled, setIsScrolled] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -23,10 +22,9 @@ const Navbar = () => {
   const handleSearchSubmit = (e) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      // Redirect to Articles page with the search term in the URL
       navigate(`/articles?q=${encodeURIComponent(searchQuery)}`);
-      setIsSearchOpen(false); // Close the input box
-      setSearchQuery('');     // Clear the input field
+      setIsSearchOpen(false); 
+      setSearchQuery('');     
     }
   };
 
@@ -36,7 +34,6 @@ const Navbar = () => {
 
         <div className="navbar-left">
           <Link to="/" className="navbar-logo">
-            {/* Use your custom component here, make it slightly larger so details show */}
             <LogoIcon size={48} />
             <span>Blognito</span>
           </Link>
@@ -63,7 +60,6 @@ const Navbar = () => {
               className="nav-search-input"
             />
 
-            {/* Search Icon (Acts as toggle when closed, submit when open) */}
             <button
               type={isSearchOpen ? "submit" : "button"}
               className="icon-btn"
@@ -73,7 +69,6 @@ const Navbar = () => {
               <Search size={20} />
             </button>
 
-            {/* Close Button (Only shows when open) */}
             {isSearchOpen && (
               <button
                 type="button"
