@@ -4,11 +4,14 @@ import { ArrowLeft, Calendar, Clock } from 'lucide-react';
 import AnimatedPage from '../components/AnimatedPage';
 import { BlogContext } from '../context/BlogContext';
 import './BlogDetails.css';
+import { useNavigate } from 'react-router-dom';
+import { Edit3, Trash2 } from 'lucide-react';
 
 const BlogDetails = () => {
   const { id } = useParams();
   const { posts } = useContext(BlogContext);
-  
+  const navigate = useNavigate();
+  const { deletePost } = useContext(BlogContext);
   const post = posts.find((p) => p.id === id);
 
   if (!post) {
@@ -25,35 +28,37 @@ const BlogDetails = () => {
 
   return (
     <AnimatedPage>
-      <article className="blog-details-container">
-        <Link to="/" className="back-link">
-          <ArrowLeft size={18} />
-          <span>Back to Articles</span>
-        </Link>
+      <div className="article-container">
+        <h1>{post.title}</h1>
+        <p className="author-info">By {post.author}</p>
 
-        <header className="article-header">
-          <span className="category-pill">{post.category}</span>
-          <h1>{post.title}</h1>
-          <p className="article-excerpt">{post.excerpt}</p>
-          
-          <div className="article-meta">
-            <div className="author-info">
-              <div className="author-avatar">{post.author.charAt(0)}</div>
-              <div>
-                <div className="author-name">{post.author}</div>
-                <div className="publish-date">
-                  <Calendar size={14} />
-                  {post.date} · <Clock size={14} /> {post.readTime}
-                </div>
-              </div>
-            </div>
-          </div>
-        </header>
+        {/* PASTE THE BUTTONS HERE */}
+        <div className="action-buttons" style={{ display: 'flex', gap: '1rem', marginTop: '1rem', marginBottom: '2rem' }}>
+          <button
+            onClick={() => navigate(`/edit/${post.id}`)}
+            style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 1rem', border: '1px solid #e5e7eb', borderRadius: '6px', background: 'white', cursor: 'pointer', color: '#374151', fontWeight: '600' }}
+          >
+            <Edit3 size={18} /> Edit
+          </button>
+
+          <button
+            onClick={() => {
+              if (window.confirm('Are you sure you want to delete this article?')) {
+                deletePost(post.id);
+                navigate('/');
+              }
+            }}
+            style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 1rem', border: 'none', borderRadius: '6px', background: '#fee2e2', cursor: 'pointer', color: '#dc2626', fontWeight: '600' }}
+          >
+            <Trash2 size={18} /> Delete
+          </button>
+        </div>
+        {/* END OF BUTTONS */}
 
         <div className="article-content">
-          <p>{post.content}</p>
+          {post.content}
         </div>
-      </article>
+      </div>
     </AnimatedPage>
   );
 };

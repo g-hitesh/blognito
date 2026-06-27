@@ -2,7 +2,7 @@ import { createContext, useRef } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { BlogProvider } from './context/BlogContext';
-
+import Edit from './pages/Edit';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import CreatePost from './pages/CreatePost';
@@ -42,6 +42,7 @@ const AnimatedRoutes = () => {
           <Route path="/post/:id" element={<BlogDetails />} />
           <Route path="/about" element={<About />} />
           <Route path="/articles" element={<Articles />} />
+          <Route path="/edit/:id" element={<Edit />} />
         </Routes>
       </AnimatePresence>
     </DirectionContext.Provider>
