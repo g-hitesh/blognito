@@ -16,8 +16,8 @@ const teamMembers = [
   },
   {
     name: "Taran",
-    role: "Backend Developer",
-    bio: "Ensures our database infrastructure is robust and our user experience remains lightning fast."
+    role: "Frontend Developer",
+    bio: "Focuses on clean system architecture and building out core, scalable platform features."
   },
   {
     name: "Saksham",
@@ -33,14 +33,14 @@ const About = () => {
         
         <header className="about-header">
           <h1>Behind the Blog</h1>
-          <p>Meet the five developers building this platform.</p>
+          <p>Meet the four developers building this platform.</p>
         </header>
 
         <div className="about-content">
           <div className="about-text">
             <h2>Who We Are</h2>
             <p>
-              Blognito isn't just a solo project—it is the collaborative effort of a passionate five-person development team currently operating out of Sahibzada Ajit Singh Nagar, Punjab.
+              Blognito isn't just a solo project—it is the collaborative effort of a passionate four-person development team currently operating out of Sahibzada Ajit Singh Nagar, Punjab.
             </p>
             <p>
               We came together with a shared vision: to build a premium, blazing-fast platform for the developer community. By combining our individual strengths across the MERN stack, UI/UX design, and complex system architecture, we turned a simple idea into the full-stack application you see today.
