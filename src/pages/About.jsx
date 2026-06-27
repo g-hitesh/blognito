@@ -58,8 +58,8 @@ const About = () => {
             </div>
 
             <div className="social-links">
-              <a href="#" className="social-btn"><Globe size={20} /> Team GitHub</a>
-              <a href="#" className="social-btn"><Mail size={20} /> Contact Us</a>
+              <a target='_blank' href="https://github.com/g-hitesh" className="social-btn"><Globe size={20} /> Team GitHub</a>
+              {/* <a href="#" className="social-btn"><Mail size={20} /> Contact Us</a> */}
             </div>
           </aside>
         </div>
